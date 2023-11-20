@@ -1,0 +1,203 @@
+.hero {
+    &-promoted-creators {
+        justify-content: space-evenly;
+    }
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-color);
+    }
+
+    &-text {
+        color: white;
+        font-size: 2.4rem;
+        margin-bottom: 5.6rem;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 1.8rem;
+            width: 16ch;
+            text-align: center;
+        }
+
+        // reduce margin for mobile
+    }
+}
+.hero-logo {
+    width: 39rem;
+    height: 16.1rem;
+    margin-top: 18rem;
+    margin-bottom: 2.4rem;
+
+    @media only screen and (max-width: 700px) {
+        width: 15.6rem;
+        height: 6.3rem;
+        margin-top: 10rem;
+    }
+}
+.hero-right {
+    display: grid;
+    padding: 3rem;
+
+    @media only screen and (max-width: 700px) {
+        padding: 0;
+    }
+    & .login-button--modal {
+        background: var(--primary-color);
+        color: white;
+        font-size: 1.8rem;
+        border-radius: 3rem;
+        padding: .9rem 6.4rem;
+        line-height: 2.4rem;
+        text-transform: none;
+        font-weight: 700;
+        justify-self: end;
+        margin-bottom: 5.8rem;
+
+        @media only screen and (max-width: 700px) {
+            position: absolute;
+            top: 0;
+            background: white;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            padding: 0.9rem 2.5rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__text {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 3.6rem;
+        line-height: 4.2rem;
+        margin-bottom: 2.2rem;
+        text-align: center;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 2.4rem;
+            margin-top: 2rem;
+        }
+    }
+
+    & .question {
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: var(--primary-color);
+        margin-top: 6.2rem;
+        margin-bottom: 3rem;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 1.8rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    & .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 6.3rem;
+
+        @media only screen and (max-width: 700px) {
+            flex-direction: row; 
+            column-gap: 5rem;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        &__row {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            @media only screen and (max-width: 700px) {
+                flex-direction: column;                
+                row-gap: 5rem;  
+                width: min-content;
+            }
+        }
+
+
+        & .options__row .option {
+            padding: 1rem 3rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 3px var(--primary-color);
+            margin-right: 1rem;
+            background: var(--secondary-color);
+            color: black;
+            border-radius: 10px;
+            font-weight: 450;
+            text-align: center;
+            font-size: 1.8rem;
+            transition: all .2s ease;
+
+            &:hover {
+                
+                
+                cursor: pointer;
+            }
+
+            
+        }
+        
+    }
+}
+
+
+.progress-bar {
+    width: 90%;
+    height: 2px;
+    // margin-bottom: 20px;
+    position: relative;
+    background-color: var(--secondary-color);
+    margin: 2rem auto;
+  }
+  
+  .progress-bar__percentCompleted {
+    position: absolute;
+    font-size: 13px;
+    top: -20px;
+    right: 0px;
+  }
+  .progress-bar--moving {
+    position: absolute;
+    height: 100%;
+    background: var(--primary-color);
+    transition: width .2s;
+  }
+  .circle {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: var(--secondary-color);
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    
+    @media only screen and (max-width: 700px) {
+        width: 1.4rem;
+        height: 1.4rem;
+        top: -6px;
+    }
+  }
+  
+  .circle-answering {
+    outline: 4px solid var(--primary-color);
+    background: white;
+  }
+  .circle-answered {
+    background-image: url('/check-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--primary-color);
+
+    @media only screen and (max-width: 700px) {
+        background-size: contain;
+    }
+  }
+  

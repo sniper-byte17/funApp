@@ -1,0 +1,216 @@
+.auth-modal__wrapper {
+    // position: relative;
+}
+.auth-modal__close-btn {
+    position: absolute;
+    display: inline-block;
+    color: var(--primary-color);
+    top: 1rem;
+    right: 2rem;
+    font-weight: 700;
+    transition: all .3s ease;
+
+    &:hover {
+        cursor: pointer;
+        // font-size: 1.7rem;
+    }
+}
+
+.login-form, .registration-form {
+    max-width: 60rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 0 auto;
+    padding: 5rem !important;   
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 700px) {
+        padding: 2rem !important;
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-size: 2.8em;
+        font-weight: 700;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &-button {
+        background-color: var(--primary-color) !important;
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
+    }
+} 
+.form-actions-extra div div div {
+    display: flex;
+    justify-content: space-between;
+}
+.divider--or {
+    color: var(--primary-color);
+    position: relative;
+    font-size: 1.8rem;
+    width: 3rem;
+    margin: 0 auto;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 15rem;
+        height: .2rem;
+        background-color: var(--primary-color);
+
+        @media only screen and (max-width: 700px) {
+            width: 10rem;
+        }
+    }
+
+    &::before {
+        left: -17rem;
+        top: 1rem;
+        @media only screen and (max-width: 700px) {
+            left: -12rem;
+        }
+    }
+
+    &::after {
+        left: 5rem;
+        top: 1rem;
+    }
+}
+.login-with-other-accounts {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    
+    &__link {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2rem;
+    }
+}
+.login-register {
+    font-weight: 450;
+    font-size: 1.7rem;
+
+    & span {
+        text-decoration: underline;
+        color: var(--primary-color);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.authentication--input {    
+    border-color: var(--primary-color) !important;
+    border-radius: 5px !important;
+}
+.authentication--input:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 2px rgb(24 144 255 / 20%) !important;
+    border-right-width: 1px !important;
+    outline: 0 !important;
+    border-radius: 5px !important;
+}
+.registration-form-fieldset {
+    flex-direction: column !important;
+    justify-content: flex-start;
+    margin-bottom: 1.2rem !important; 
+    margin: 0 auto;
+
+    & > div {
+        &:first-child {
+            display: flex;
+            margin-left: 0 !important;
+            margin-bottom: -1.5rem;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            padding: 0 0 8px;
+
+        }
+
+        &:last-child {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+
+        &:last-child {
+            & > div {
+                width: 37rem;
+                
+                @media only screen and (max-width: 700px) {
+                    width: 29.6rem;
+                }
+                & > div {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+.registration-form-signup-button {
+    justify-content: center;
+    margin-top: 2rem !important;
+
+    & > div {
+        margin-left: 0;
+    }
+}
+.ant-select-dropdown {
+    z-index: 1301;
+}
+.registration-form {
+    & .already-exists-wrapper {
+        font-size: 1.6rem;
+
+        & button {
+            display: block;
+            margin: 1rem auto;
+            background-color: var(--primary-color);
+            border-radius: 2rem;
+            border: none;
+            color: white;
+            padding: 1rem 3rem;
+        }
+    }
+}
+
+.ff-button-primary {
+    background-color: var(--primary-color) !important;
+    border-radius: 2rem;
+    padding: .5rem 1.5rem;
+    color: white !important;
+    font-size: 1.6rem;
+    box-sizing: content-box;
+}
+.ant-modal-content {
+    border-radius: 1rem;
+}
+.ant-modal-header, .ant-modal-footer {
+    border-radius: 1rem;
+    border: none;
+}
+
+.ant-modal-title {
+    color: var(--primary-color) !important;
+    text-align: center !important;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+
+.resetform-back {
+    position: absolute;
+    right: 7rem;
+    top: 25px;
+}
+.forgot-button {
+    &:hover {
+        cursor: pointer;
+    }
+}

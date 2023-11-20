@@ -1,0 +1,288 @@
+.profile {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    height: 69.6rem;
+    overflow-y: scroll;
+    
+    @media only screen and (min-width: 1024px) {
+        padding-left: 7%;
+        padding-right: 7%
+    }
+
+    @media only screen and (max-width: 700px) {
+        height: unset;
+        overflow-y: unset;
+    }
+
+    &-cover {
+        position: relative;
+        min-height: 12rem;
+
+        @media only screen and (min-width: 1024px) {           
+            min-height: 27.3rem;
+        }
+        
+        @media only screen and (min-width: 400px)  and (max-width: 1023px) {
+            min-height: 19.3rem; 
+        }
+
+        &__icon-wrapper {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__icon {
+            width: 2.4rem;
+            height: 2.4rem;
+
+            @media only screen and (min-width: 1024px) {
+           
+                // min-height: 27.3rem;
+            }
+        }
+    }
+
+    &-dp {
+        width: 7.9rem;
+        height: 7.9rem;
+        margin: 0 auto;
+        margin-top: -4rem;
+        position: relative;
+        z-index: 0;
+
+        @media only screen and (min-width: 1024px) {
+            width: 15rem;
+            height: 15rem;
+            margin-top: -10rem;
+        }
+
+        &__icon {
+            left: 60px;
+            top: 50px;
+            transition: transform .5s ease;
+            
+            @media only screen and (min-width: 1024px) {
+                left: 13rem;
+                top: 11rem;
+            }
+
+            // &:hover {
+            //     cursor: pointer;
+            //     transform: scale(1.03);
+            // }
+        }
+    }
+
+    &-cover__icon, &-dp__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+        }
+    }
+
+    &-info-short {
+        text-align: center;
+        margin: 1rem 0;
+
+        & .profile-username {
+            // margin-left: 8rem;
+        }
+        
+        & .profile-lastseen {
+            font-size: 1.2rem;
+            left: 1.7rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: gray;
+                top: 3px;
+                left: -10px;
+            }
+        }
+    }
+
+    &-websites {
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (min-width: 1024px) {            
+            justify-content: normal;
+        }
+
+        &__row {
+            list-style: none;
+            
+            @media only screen and (min-width: 920px) {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            
+                &:first-child {
+                    margin-right: 2%;
+                }
+                &:last-child {
+                    margin-left: 2%;
+                }
+            }
+        }
+    }
+
+    &-website {
+        margin-bottom: 1rem;
+
+        @media only screen and (min-width: 1024px) {
+            margin-right: 4rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+}
+.profile-navigation {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    box-shadow: 0px 4px 4px var(--secondary-color);
+    padding: 1rem 0;
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(2) {
+            margin: 0 25%;
+        }
+
+        &.active {
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        & span {
+            margin: .5rem 0;
+        }
+    }
+
+    &__img {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
+.profile-bio {
+    margin-bottom: 1rem;
+    
+    & p {
+        text-align: center;
+        width: 135ch;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 1410px) {
+            width: auto;
+        }
+    }
+}
+.profile-media-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: 600px) {
+        flex-direction: row;
+        // justify-content: space-between; 
+    }
+    & .hover-action-parent {
+        max-width: 25rem;
+        width: 100%;
+        min-height: 18.4rem;
+        border: 1px solid black;
+        padding: 0.3rem;
+        border-radius: 5px;
+    }
+    & .profile-media {
+        max-width: 25rem;
+        width: 100%;
+        min-height: 18.4rem;
+        margin-bottom: 1rem;
+   
+        @media only screen and (min-width: 600px) {
+            // min-height: 29.1rem;            
+        }
+    }
+}
+.website-editor-profile {
+    display: none;
+}
+.websites-logo {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.website-preview {
+    display: flex; 
+    column-gap: 1rem;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+
+    // position: relative;
+
+    // & .remove-website {
+    //     position: absolute;
+    //     border: none;
+    //     border-radius: 50%;
+    //     background-color: rgba(0, 0, 0, .3);
+    //     font-weight: bold;
+    //     top: -10px;
+    //     right: -10px;
+    //     width: 2.5rem;
+    //     height: 2.5rem;
+    //     color: white;
+    //     text-align: center;
+    //     display: none;
+    // }
+
+    &:hover .remove-website {
+        display: block;
+        cursor: pointer;
+    }
+}
+.website-modal-btn {
+    color: black !important;
+    border: 1px solid var(--primary-color);
+    min-height: 4.2rem;
+    border-radius: 0.8rem;
+    margin-top: 0.5rem;
+
+    &:hover {
+        color: white !important;
+    }
+}
+.ant-modal-footer {
+    & .ant-btn {
+        color: black !important;
+
+        &:hover {
+            color: white !important;
+        }
+    }
+}

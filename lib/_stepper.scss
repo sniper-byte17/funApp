@@ -1,0 +1,232 @@
+.stepper-wrapper {
+    // padding: 0 5rem;
+    display: grid;
+
+    & .anticon { 
+      position: relative;
+      top: -4px;
+    }
+}
+.steps-content {
+    background: none;
+    border: none;
+    margin-bottom: 8.6rem;
+}
+.steps-action {
+    justify-self: end;
+    display: flex;
+
+    @media only screen and (max-width: 700px) {
+      justify-self: center;
+      flex-direction: column-reverse;
+      width: 90%;      
+      margin-bottom: 1rem;
+    }
+} 
+.questionnaire-button {
+    background-color: white !important;
+    border-radius: 4rem !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: auto !important;    
+    font-weight: 700 !important;
+    font-size: 1.8rem !important;
+    line-height: 2.4rem !important;
+    padding: 0.9rem 4.6rem !important;
+
+    &--locked {      
+        background: var(--secondary-color) !important; 
+        color: var(--primary-color) !important;
+    }
+
+    &:nth-child(1) {
+      border: 1px solid var(--secondary-color) !important;
+    }
+    @media only screen and (max-width: 700px) {
+      margin-bottom: 2rem;
+    }
+
+}
+.Question-Choice-Container {
+  position: relative;
+  font-size: 1.8rem;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  box-shadow: 0px 4px 16px rgba(87, 185, 229, 0.3);
+  border-radius: 8px;
+
+  &-locked {
+    transform: scale(1.1);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &--no-img {
+    border-radius: 2rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    width: 100%;   
+  }
+
+}
+
+.Choice-Radio {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+}
+
+.Choice-Radio:hover {
+  cursor: pointer;
+}
+
+.Choice-subtitle {
+  position: absolute;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center; 
+  line-height: 16px;
+  bottom: -38px;
+  color: var(--primary-color); 
+
+}
+.options__row-1 {
+  @media only screen and (max-width: 700px) {
+    order: 2;
+  }
+}
+
+.options__row-2 {
+  @media only screen and (max-width: 700px) {
+    order: 1;
+  }
+}
+
+.options__row-1 .Question-Choice-Container .Choice-subtitle {
+  bottom: -2.3rem;
+}
+
+.options__row-2 .Question-Choice-Container .Choice-subtitle {
+  bottom: -5.5rem;
+
+  @media only screen and (max-width: 700px) {
+    bottom: -4rem;
+  }
+  &--last {
+    bottom: -2.3rem;
+  }
+}
+
+.Choice-img {
+  
+  &.gender-male-class {
+    width: 3rem;
+    height: 3rem;
+    margin: 1.5rem 3.4rem;
+    position: relative;
+
+    
+  }
+  
+  &.gender-female-class {
+    width: 2.1rem;
+    height: 3.4rem;
+    margin: 1.3rem 3.8rem;
+
+  }
+  
+  &.gender-male-female-class {
+    width: 3.18rem;
+    height: 3.18rem;
+    margin: 2.9rem 3.12rem 3.32rem 3.1rem;
+
+  }
+  
+  &.gender-female-male-class {
+    width: 2.375rem;
+    height: 3.375rem;
+    margin: 3.1rem 3.4rem 2.8rem 3.5rem;
+  }
+  
+  &.gender-non-binary-class {
+    width: 1.917rem;
+    height: 3.641rem;
+    margin: 2.8rem 3.8rem 2.8rem 3.6rem;
+  }
+}
+
+.Choice-Bg {
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  
+  border-radius: 1rem;
+}
+
+.Choice-Radio:hover ~ .Choice-Bg,
+.Choice-Radio:checked ~ .Choice-Bg {
+  border: 1px solid var(--primary-color);
+}
+
+//   .Choice-Radio:checked .Choice-Bg {}
+
+.Choice-Radio:hover ~ .Choice-Content, 
+.Choice-Radio:checked ~ .Choice-Content {
+  color: white;
+  transform: scale(1.1);
+}
+
+.Choice-content {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  margin: 1.3rem 3.8rem;
+  color: var(--primary-color);
+}
+
+.Choice-Content:hover {
+  background-color: var(--primary-color);
+}
+
+@keyframes rollout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.roll-out {
+  animation: rollout 0.5s;
+}
+
+.custom-img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.unset-img {
+  width: 100%;
+}
+.unset-img > div {
+  position: unset !important;
+}

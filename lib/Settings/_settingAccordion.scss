@@ -1,0 +1,307 @@
+.setting-accordion-wrapper {
+    min-height: 50rem;
+    padding: 1rem;
+
+    @media only screen and (min-width: 1024px) {
+       min-height: 72rem;
+       overflow-y: scroll;
+       position: relative;
+       padding: 2rem 7%;
+    }
+
+    & .setting-tabs-desktop {
+        @media only screen and (min-width: 1024px) {
+            width: 30%;    
+        }   
+    }
+
+    & .css-pwcg7p-MuiCollapse-root, & .css-bz4dnt-MuiCollapse-root {
+        @media only screen and (min-width: 1024px) {
+        }
+    }
+}
+
+.setting-accordion {
+    box-shadow: none;
+    padding: 1rem;
+    
+    @media only screen and (min-width: 1024px) {
+        position: unset;    
+        padding: 0;
+    }
+    & > div:first-child {
+        @media only screen and (min-width: 1024px) {
+            position: unset;    
+        }
+    }
+
+
+
+    &::before {
+        height: 0;
+    }
+
+    & > div:first-child {
+        border-radius: .8rem;
+
+        &[aria-expanded="true"] {
+            background-color: var(--secondary-color);
+        }
+    }
+
+    & > div:nth-child(2) {
+        @media only screen and (min-width: 1024px) {
+            position: absolute;
+            left: 40%;
+            top: 0px;
+            width: 40%;
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                background: var(--primary-color);
+                top: 0;
+                left: -15%;
+                min-height: 77vh;
+            }
+        }
+    }
+
+    &-title {
+        font-weight: 700;
+        color: var(--primary-color);
+        @media only screen and (min-width: 1024px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &-dropdown-icon {
+        width: 3rem;
+        height: 3rem;
+        color: var(--primary-color);
+    }
+
+    & .tab-title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        @media only screen and (min-width: 1024px) {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    & .form-submit-btn {
+        background-color: var(--primary-color);
+        border-radius: 2rem;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        padding: 1rem 3rem;
+        color: white;
+        font-size: 1.6rem;
+        margin-top: 1rem;
+
+        @media only screen and (min-width: 1024px) {
+            width: 20%;
+            margin: 0;
+            margin-left: auto;
+        }
+    }
+
+    & .websites {
+        & p {
+            background-color: gray;
+            border: 1px solid gray;
+            color: white;
+            font-size: 1.2rem;
+            display: inline-block;
+            padding-left: .2rem;
+            margin-right: .5rem;
+
+            & span {
+                margin-left: .2rem;
+                box-sizing: content-box;
+                // columns: white;
+                padding: .2rem;
+                // background-color: red;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.tab-form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+
+    & .username-showcase {
+        color: #A39393;
+    }
+
+    & label {
+        font-weight: 400;
+        font-size: 16px;
+        
+        color: #000000;
+    }
+
+
+
+    & input, & textarea {
+        border: 1px solid var(--primary-color);
+        min-height: 4.2rem;
+        border-radius: .8rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        outline: none;
+        padding: .5rem 1.5rem;
+
+        &[name="bio"] {
+            min-height: 8rem;
+        }
+    }
+
+    & .ant-select-selector {
+        border: 1px solid var(--primary-color) !important;
+        min-height: 4.2rem;
+        border-radius: .8rem !important;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        outline: none;
+        padding: .5rem 1.5rem !important; 
+    }
+
+    &-add-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        // margin-right: 1.5rem;
+    }
+
+    &-add-btn {
+        margin-top: 1rem;
+        display: flex;
+        column-gap: 1rem;
+    }
+}
+.tab-form__action {
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+}
+
+.tab-field__action-wrapper {
+    padding: 1rem 4%;
+
+    & .form-submit-btn {
+        background-color: var(--primary-color);
+        border-radius: 2rem;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        padding: 1rem 3rem;
+        color: white;
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+}
+
+.previous-page {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.angle-left {
+    width: 2.4rem;
+    height: 2.4rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 2.4rem;
+}
+.setting-username {
+    background-color: var(--primary-color);
+    
+}
+.language-radio-wrapper {    
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.ant-switch {
+    border: 1px solid var(--secondary-color);
+}
+.ant-switch[aria-checked="true"] {
+    background-color: var(--secondary-color);
+}
+.ant-switch-handle {
+    top: 0px;
+}
+.privacy-notification {
+    margin-bottom: 1rem;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem;
+}
+.desktop-divider-line {
+    @media only screen and (min-width: 1024px) {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background: var(--primary-color);
+        top: 0;
+        left: 34%;
+    }
+    
+}
+.setting-username {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    width: 30%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: .8rem;
+    @media only screen and (max-width: 1024px) {
+        width: 100%;
+    }
+}
+.settings-media-wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    
+    & > div {
+        // box-shadow: 0 0 5px gray;
+        // padding: .5rem;
+        // border: 1px solid red;
+    }
+
+    margin-bottom: 1rem;
+}
+.media-upload-button-wrapper {
+    display: inline-block;
+    background-image: url(/upload.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 1px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+.media-upload-button {
+    
+}
